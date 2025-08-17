@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Art Maker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pixel Art Maker</h1>
+        
+        <div class="controls">
+            <div class="control-group">
+                <label for="gridSize">그리드 크기:</label>
+                <input type="number" id="gridSize" min="10" max="50" value="20">
+                <button id="createGrid">그리드 생성</button>
+            </div>
+            
+            <div class="control-group">
+                <label for="colorPicker">색상 선택:</label>
+                <input type="color" id="colorPicker" value="#000000">
+            </div>
+            
+            <div class="control-group">
+                <label for="hexInput">헥스 코드:</label>
+                <input type="text" id="hexInput" placeholder="#000000" maxlength="7">
+                <button id="applyHex">적용</button>
+            </div>
+            
+            <div class="control-group">
+                <button id="eraser">지우개</button>
+                <button id="clear">전체 지우기</button>
+            </div>
+            
+            <div class="control-group">
+                <button id="undo">뒤로가기 (Ctrl+Z)</button>
+                <button id="redo">앞으로가기 (Ctrl+Y)</button>
+            </div>
+            
+            <div class="control-group">
+                <button id="save">저장하기</button>
+            </div>
+        </div>
+        
+        <div class="canvas-container">
+            <canvas id="pixelCanvas"></canvas>
+        </div>
+        
+        <div class="info">
+            <p>좌클릭: 그리기 | 우클릭: 지우기 | 드래그: 연속 그리기</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
